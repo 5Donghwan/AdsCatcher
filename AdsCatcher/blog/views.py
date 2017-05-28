@@ -1,11 +1,11 @@
 from django.shortcuts import render
 
 # Create your views here.
-def index(request):
-    return render(request, "blog/templates/index.html")
+def login_index(request):
+    return render(request, "blog/login_index.html")
 
-def reporting(request):
-    return render(request, "blog/templates/reporting.html")
+def report(request):
+    return render(request, "blog/report.html")
 
 def feedback(request):
-    return render(request, "blog/templates/feedback.html")
+    return render(request, "blog/feedback.html")
