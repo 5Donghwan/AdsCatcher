@@ -1,0 +1,45 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facebook Tracking</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/facebook.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+
+    <body id="home">
+        <div class="container-fluid">
+            <div class="menu-wrapper">
+                <ul class="nav-list text-center effect">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Reporting</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Signup</a></li>
+                    </ul>
+            </div>
+        </div>
+        
+        <div id="wrap">
+            <div id="main-nav">
+                <div class="container-fluid">
+                    <div class="nav-header">
+                        <a href="index.html" class="nav-brand">페이지 <span>이름 ?</span></a>
+                    </div>
+				</div>
+			</div>
+
+			{% block content %}
+			{% endblock %}
+			
+        </div>
+		
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+    </body>
+</html>
