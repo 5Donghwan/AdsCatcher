@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'django.contrib.sites',
-    'accounts.providers.kakao',
+    'allauth.socialaccount.providers.facebook',
 ]
 
 MIDDLEWARE = [
