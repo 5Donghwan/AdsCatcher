@@ -38,9 +38,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # local apps
     'blog',
     'accounts',
     'gallery',
+
+    # allauth for facebook
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'django.contrib.sites',
+    'accounts.providers.kakao',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +138,17 @@ STATICFILES_DIRS = [
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',    
+)
+
+#allauth needs site_id
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/blog/'
+LOGOUT_REDIRECT_URL = '/gallery/'
