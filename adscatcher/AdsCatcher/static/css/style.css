@@ -27,6 +27,7 @@ a:focus {
   border-top: 43px solid #3b5998;
 }
 .container-fluid {
+  font-family: 'Nanum Gothic', serif;
   margin-right: auto;
   margin-left: auto;
   max-width: 1200px;
