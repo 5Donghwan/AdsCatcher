@@ -49,7 +49,6 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
-db.sqlite3
 __pycache__
 .vscode
 media
