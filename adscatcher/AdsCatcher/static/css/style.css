@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+
 ul, ol {
   padding-left: 18px;
 }
@@ -59,8 +62,12 @@ a:focus {
   text-decoration: none;
 }
 .media {
+  font-family: 'Nanum Gothic', serif;
   background-color: #ebebeb;
   margin-bottom: 20px;
+}
+.media h3 {
+  font-family: 'Nanum Brush Script', serif;
 }
 /* ------------------------------ nav menu -------------------------- */
 .main-nav a {
@@ -90,7 +97,7 @@ a:focus {
 .nav-brand {
   border: 2px solid #000000;
   width: auto;
-  font-size: 38px;
+  font-size: 32px;
   display: block;
   margin: 0 auto;
   text-align: center;

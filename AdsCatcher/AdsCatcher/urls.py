@@ -24,4 +24,7 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
     url(r'^', include('blog.urls', namespace='blog')),
     url(r'^home/', include('gallery.urls',namespace='gallery')),
+    url(r'^communication/', include('communication.urls', namespace='communication')),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

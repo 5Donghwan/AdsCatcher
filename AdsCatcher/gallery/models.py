@@ -7,8 +7,7 @@ class Gallery(models.Model):
     title = models.CharField(max_length=30)
     contents = models.TextField()
     image = models.ImageField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    count = models.IntegerField(default=0)
 
     def __str__(self):
         return '{}, {}'.format(self.title, self.id)
