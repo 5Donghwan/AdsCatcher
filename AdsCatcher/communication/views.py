@@ -32,3 +32,5 @@ def feedback_new(request):
     else:
         form = FeedbackForm()
     return render(request, "communication/feedback.html", {"form": form})
+
+    
