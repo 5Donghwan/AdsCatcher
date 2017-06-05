@@ -39,9 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    #django shell
-    "django_extensions",
-
     # local apps
     'blog',
     'accounts',
