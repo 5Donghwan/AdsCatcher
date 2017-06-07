@@ -153,5 +153,5 @@ AUTHENTICATION_BACKENDS = (
 #allauth needs site_id
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = '/home/'
+LOGIN_REDIRECT_URL = '//'
 LOGOUT_REDIRECT_URL = '/gallery/'
