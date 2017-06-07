@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^accounts/', include('accounts.urls', namespace='accounts')),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^', include('blog.urls', namespace='blog')),
-    url(r'^home/', include('gallery.urls',namespace='gallery')),
+    url(r'^gallery/', include('gallery.urls',namespace='gallery')),
     url(r'^communication/', include('communication.urls', namespace='communication')),
 ]
 
