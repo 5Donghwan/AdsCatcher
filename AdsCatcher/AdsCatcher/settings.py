@@ -161,7 +161,7 @@ LOGOUT_REDIRECT_URL = '/gallery/'
 SOCIALACCOUNT_PROVIDERS = \
     {'facebook':
        {'METHOD': 'oauth2',
-        'SCOPE': ['email','public_profile', 'user_friends'],
+        'SCOPE': ['email','public_profile', 'user_friends', 'user_likes'],
         'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
         'FIELDS': [
             'id',
@@ -174,7 +174,8 @@ SOCIALACCOUNT_PROVIDERS = \
             'timezone',
             'link',
             'gender',
-            'updated_time'],
+            'updated_time',
+            'likes'],
         'EXCHANGE_TOKEN': True,
         'LOCALE_FUNC': lambda request: 'kr_KR',
         'VERIFIED_EMAIL': False,
