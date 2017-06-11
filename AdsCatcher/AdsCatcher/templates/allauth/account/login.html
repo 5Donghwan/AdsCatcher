@@ -5,6 +5,15 @@
     {% load socialaccount %}
     {% providers_media_js %}
 
-    <a href="{% provider_login_url "facebook" method="js_sdk" %}">Login Button image</a>
-    
+   
+
+        <a href="{% provider_login_url "facebook" method="js_sdk" %}" 
+        class="btn btn-block btn-social btn-lg btn-facebook" 
+        >
+        
+        <span class="fa fa-facebook"></span>
+               Sign in with Facebook
+
+    </a>
+ 
 {% endblock content %}
