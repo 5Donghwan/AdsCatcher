@@ -6,7 +6,6 @@ django.setup()
 
 
 import json
-import csv
 import datetime
 import time
 import urllib.request
@@ -161,23 +160,3 @@ if __name__ == '__main__':
 
     Blog.objects.bulk_create(my_feed_list)
 
-# #######CSV######
-# def write_csv(wan_data, num):
-#     with open('data %s %s.csv' % (since, until), 'wt', encoding = 'cp949') as file:  #, encoding='utf8'
-#         w = csv.writer(file)
-#         w.writerow(['content_names', 'content_dates', 'content_hits', 'content_coms'])
-#         for i in range(num):
-#             w.writerow([i, wan_data[i][1], wan_data[i][2], wan_data[i][3]])
-#             # w.writerow([wan_data[6][0],wan_data[6][1],wan_data[6][2],wan_data[6][3]])
-
-# #####JSON######
-# def save_json(data,fname):
-#         import json
-#         with open(fname, 'w') as f:
-#             json.dump(data, f)
-
-
-# ######################
-
-# write_csv(wan_data, num)
-# save_json(wan_data,'facebook_my_feed.json')
