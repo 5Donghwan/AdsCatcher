@@ -13,10 +13,10 @@ def login_index(request):
         if blog.created_at == compared_created_time:
             if blog.feed_title != compared_title:
                 blog.state = "modified"
+                Blog.objects.filter(feed_title = str(compared_title)).delete()
             else:
                 pass
         else:
-            pass
         compared_created_time = blog.created_at
         compared_title = blog.feed_title
         
