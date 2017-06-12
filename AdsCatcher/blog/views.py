@@ -17,6 +17,7 @@ def login_index(request):
             else:
                 pass
         else:
+            pass
         compared_created_time = blog.created_at
         compared_title = blog.feed_title
         
