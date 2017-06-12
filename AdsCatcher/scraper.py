@@ -17,9 +17,9 @@ from blog.models import Blog
 app_id = "1925461554405728"
 app_secret = "d00b4a7b6385c0bba1d9bc3c3502539e"
 access_token = app_id + "|" + app_secret
-page_id = "1471642553050525"
-since = "2017-06-07"
-until = "2017-06-11"
+page_id = "1846148835712539"
+since = "2017-06-10"
+until = "2017-06-12"
 
 
 def getFacebookPageFeedData(page_id, access_token, since, unitl):

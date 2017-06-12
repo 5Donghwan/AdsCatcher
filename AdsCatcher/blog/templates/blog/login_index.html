@@ -1,25 +1,27 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-		
- 
-{% block body %}
-{% block content %}
 
-{% if user %}
-    <h1>Welcome, {{user.first_name}}</h1>
-    <p>Following is the Extra information that facebook has provided to allauth:</p>
-    {% for account in user.socialaccount_set.all %}
-        <h2 style="text-transform:capitalize;">{{ account.provider }} account data</h2>
-        <p><img width="50" height="50" src="{{ account.get_avatar_url }}" /></p>
-        <p>UID: <a href="{{account.extra_data.link }}">{{ account.uid }}</a></p>
-        <p>Username: {{ account.extra_data.name }}</p>
-        <p>First Name: {{ account.extra_data.first_name }}</p>
-        <p>Last Name: {{ account.extra_data.last_name }}</p>
-        <p>Last Name: {{ account.extra_data.likes }}</p>
-        <p>Profile Link: <a href="{{ account.extra_data.link }}">{{ account.extra_data.link }}</a></p>
-    {% endfor %}
-{% endif %}
- 
-{% endblock content %}
-{% endblock body %}	
+{% block content %}
+    <div class="padding" >
+		<div class="full col-md-12" style="background-color: #ebebeb">
+                    
+<!-- content -->                      
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">                
+            {% for blog in blog_list %} 
+                <div class="panel panel-default">
+                <div class="panel-heading"><a href="#" class="pull-right">{{ blog.state }} </a><h4>{{ blog.feed_title }}</h4></div>
+                    <div class="panel-body">
+                        {{ blog.content }}
+                    </div>
+                </div>
+            {% endfor %} 
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+{% endblock %}	

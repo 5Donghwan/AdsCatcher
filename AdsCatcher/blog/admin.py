@@ -3,6 +3,6 @@ from .models import Blog
 # Register your models here.
 
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ['page_name', 'feed_title', 'content', 'created_at']
+    list_display = ['id', 'page_name', 'feed_title', 'content', 'created_at', 'state']
 
 admin.site.register(Blog, BlogAdmin)
