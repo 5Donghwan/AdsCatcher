@@ -9,16 +9,22 @@ import json
 import datetime
 import time
 import urllib.request
+import datetime
 
 from blog.models import Blog
 
 
-app_id = "1925461554405728"
-app_secret = "d00b4a7b6385c0bba1d9bc3c3502539e"
+app_id = "475921849425721"
+app_secret = "6e8b4176bfa2dbc6f7f7879f4733a191"
 access_token = app_id + "|" + app_secret
 page_id = "1846148835712539"
-since = "2017-06-10"
-until = "2017-06-12"
+
+now = datetime.datetime.now()
+tomorrow = now.replace(day=now.day+1)
+now_date = now.strftime('%Y-%m-%d')
+tomorrow_date = tomorrow.strftime('%Y-%m-%d')
+since = now_date
+until = tomorrow_date
 
 
 def getFacebookPageFeedData(page_id, access_token, since, unitl):

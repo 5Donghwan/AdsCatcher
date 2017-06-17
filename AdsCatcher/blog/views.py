@@ -2,12 +2,15 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .models import Blog
 from allauth.socialaccount.models import SocialAccount, SocialToken
+from django.contrib.auth.decorators import login_required
+
 #for telegram bot sending message
 import telegram 
 
 bot = telegram.Bot(token='384831612:AAF_QK-qKzIdYbgEJ6ksjjckTxU_GabhlIo')
 chat_id = bot.get_updates()[-1].message.chat.id
 # Create your views here.
+@login_required
 def login_index(request):
     blog_list = Blog.objects.all().order_by("-created_at")
 
@@ -26,7 +29,7 @@ def login_index(request):
             pass
         compared_created_time = blog.created_at
         compared_title = blog.feed_title
-        
+
     return render(request, "blog/login_index.html", {
         "blog_list": blog_list
     })
